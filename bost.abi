@@ -1,0 +1,40 @@
+{
+  "lang": "javascript",
+  "version": "1.0.1",
+  "abi": [
+        {
+            "name": "resonanceBOST",
+            "args": [
+                "string"
+            ],
+            "amountLimit": [
+                {
+                    "token": "iost",
+                    "val": "100000000"
+                },
+                {
+                    "token": "bost",
+                    "val": "100000000"
+                }
+            ]
+        },
+        {
+            "name": "createBID",
+            "args": [
+                "string"
+            ],
+            "amountLimit": [
+                {
+                    "token": "bost",
+                    "val": "10000"
+                }
+            ]
+        },
+        {
+            "name": "can_update",
+            "args": [
+                "string"
+            ]
+        }
+    ]
+}
