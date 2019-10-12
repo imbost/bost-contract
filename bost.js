@@ -41,7 +41,7 @@ class Bost {
         const periodPool = this._getPeriodPool()
         const iostPool = this._getIOSTPool()
         blockchain.deposit(tx.publisher, amount * 0.7, "Resonance deposit")
-        blockchain.callWithAuth("token.iost", "transfer", ["iost", tx.publisher, tx.publisher, String(amount * 0.3), "extraiostbonus"])
+        blockchain.callWithAuth("token.iost", "transfer", ["iost", tx.publisher, "bostbonus", String(amount * 0.3), "extraiostbonus"])
         if (amount + periodPool < IOST_PER_PERIOD) {
             let bost = this._getBOSTExchangeRate(period) * amount
             blockchain.callWithAuth("token.iost", "transfer", ["bost", blockchain.contractName(), tx.publisher, String(bost), "Resonance"])
