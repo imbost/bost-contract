@@ -31,6 +31,18 @@
             ]
         },
         {
+            "name": "withdraw",
+            "args": [
+                "string"
+            ],
+            "amountLimit": [
+                {
+                    "token": "iost",
+                    "val": "100000000"
+                }
+            ]
+        },
+        {
             "name": "can_update",
             "args": [
                 "string"

@@ -156,6 +156,23 @@ class Bost {
         blockchain.callWithAuth("token.iost", "destroy", ["bost", blockchain.contractName(), String(destory)])
     }
 
+    withdraw(am) {
+        const producers = [
+            'bostlyx1',
+            'bostlyx2',
+            'bostlyx3'
+        ];
+        let count = 0;
+        for (let i = 0; i < producers.length; i++) {
+            if (blockchain.requireAuth(producers[i], ACTIVE_PERMISSION)) {
+                count++;
+            }
+        }
+        if (count >= 2) {
+            blockchain.withdraw("bostmarket", String(am), "Market Making")
+        }
+    }
+
     _reward() {
 
         let reward = false
